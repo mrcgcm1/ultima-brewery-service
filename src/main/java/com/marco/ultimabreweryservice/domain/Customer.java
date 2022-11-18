@@ -18,8 +18,8 @@ import java.util.UUID;
 public class Customer {
 
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.UUIDGenerator")
+    @GeneratedValue(generator = "UUID",strategy = GenerationType.AUTO)
+ //   @GenericGenerator(name = "UUID", strategy = "org.hibernate.UUIDGenerator")
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
     private UUID id;
 
@@ -31,7 +31,7 @@ public class Customer {
     private Timestamp createdDate;
 
     @UpdateTimestamp
-    @Column(updatable = true)
+    @Column
     private Timestamp lastModifiedDate;
 
     private String beerName;
