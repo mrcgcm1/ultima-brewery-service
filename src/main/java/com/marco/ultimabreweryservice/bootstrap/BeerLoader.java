@@ -1,5 +1,6 @@
 package com.marco.ultimabreweryservice.bootstrap;
 
+import com.marco.ultimabreweryservice.domain.Beer;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
