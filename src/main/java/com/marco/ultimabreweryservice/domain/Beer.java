@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.envers.Audited;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -17,13 +18,14 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 @Entity
+@Audited
 public class Beer {
 
     @Id
     @GeneratedValue(generator = "UUID",strategy = GenerationType.AUTO)
  //   @GenericGenerator(name = "UUID", strategy = "org.hibernate.UUIDGenerator")
     @Type(type = "uuid-char")
-    @Column(length = 36, columnDefinition = "varchar", updatable = false,nullable = false)
+    @Column( length = 36, updatable = false,nullable = false)
     private UUID id;
 
     @Version
