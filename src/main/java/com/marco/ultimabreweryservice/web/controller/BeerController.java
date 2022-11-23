@@ -2,6 +2,7 @@ package com.marco.ultimabreweryservice.web.controller;
 
 import com.marco.ultimabreweryservice.model.BeerDto;
 import com.marco.ultimabreweryservice.services.BeerService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,16 +19,13 @@ import java.util.UUID;
  */
 @RequestMapping("/api/v1/beer")
 @RestController
+@AllArgsConstructor
 public class BeerController {
 
     private final BeerService beerService;
 
-    public BeerController(BeerService beerService) {
-        this.beerService = beerService;
-    }
-
     @GetMapping({"/{beerId}"})
-    public ResponseEntity<BeerDto> getBeer(@PathVariable("beerId") UUID beerId){
+    public ResponseEntity<BeerDto> getBeerById(@PathVariable("beerId") UUID beerId){
         return new ResponseEntity<>(beerService.getBeerById(beerId), HttpStatus.OK);
     }
 
