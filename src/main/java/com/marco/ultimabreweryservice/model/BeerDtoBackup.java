@@ -1,6 +1,7 @@
 package com.marco.ultimabreweryservice.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,15 +15,12 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-/**
- * Created by jt on 2019-04-20.
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDto {
-
+public class BeerDtoBackup {
+    static final long serialVersionUID = 6924707560256521004L;
     @Null
     private UUID id;
     @Null
@@ -36,14 +34,15 @@ public class BeerDto {
     @NotBlank
     private String beerName;
     @NotNull
-    private String beerStyle;
+    private BeerStyleEnum beerStyle;
     @NotNull
     @Positive
-    private Long upc;
+    private String upc;
     @NotNull
-    @Positive
+    //  @Positive
     private BigDecimal price;
 
     private Integer quantityOnHand;
+
 
 }

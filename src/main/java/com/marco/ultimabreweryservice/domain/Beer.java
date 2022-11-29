@@ -1,8 +1,8 @@
 package com.marco.ultimabreweryservice.domain;
 
+import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.hibernate.envers.Audited;
@@ -39,10 +39,13 @@ public class Beer {
     @Column
     private Timestamp lastModifiedDate;
     private String beerName;
-    private String beerStyle;
+
+    @Column
+    @Enumerated(EnumType.STRING)
+    private BeerStyleEnum beerStyle;
 
     @Column(unique = true)
-    private Long upc;
+    private String upc;
 
     private BigDecimal price;
     private Integer minOnHand;
