@@ -1,11 +1,12 @@
 package com.marco.ultimabreweryservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.marco.dtocommoninterface.model.BeerDto;
+import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import com.marco.ultimabreweryservice.bootstrap.BeerLoader;
 import com.marco.ultimabreweryservice.services.BeerService;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -20,12 +21,12 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyBoolean;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
 @WebMvcTest(BeerController.class)
 public class BeerControllerTestCase {
 
@@ -42,7 +43,7 @@ public class BeerControllerTestCase {
 
     BeerDto validBeerPost;
 
-    @Before
+    @BeforeEach
     public void setUp(){
         validBeerGet = BeerDto.builder()
                 .id(UUID.randomUUID())
