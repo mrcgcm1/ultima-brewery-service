@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.h2.tools.Server;
 import java.sql.SQLException;
 
-@Configuration
+//@Configuration
 public class TcpConfig {
     @Bean(initMethod = "start", destroyMethod = "stop")
     public Server inMemoryH2DatabaseServer() throws SQLException {
