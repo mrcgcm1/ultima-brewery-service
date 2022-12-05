@@ -8,7 +8,6 @@
         <version>1.0-3</version>
     </parent>
 
-
     <groupId>com.marco</groupId>
     <artifactId>ultima-brewery-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -77,6 +76,16 @@
             <artifactId>dto-common-interface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--  Fine  Caching    -->
+        <!--  Test Container   -->
+        <!-- https://mvnrepository.com/artifact/org.testcontainers/oracle-xe -->
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>oracle-xe</artifactId>
+            <version>1.17.6</version>
+            <scope>test</scope>
+        </dependency>
+      <!--  Fine  Container    -->
     </dependencies>
 
 
