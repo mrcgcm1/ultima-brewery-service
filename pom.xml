@@ -12,7 +12,7 @@
     <artifactId>ultima-brewery-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>ultima-brewery-service</name>
-    <description>ultima-brewery-service</description>
+    <description>Service per la gestione delle birre</description>
     <dependencies>
         <!-- Envers -->
         <dependency>
