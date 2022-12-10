@@ -1,10 +1,10 @@
 package com.marco.ultimabreweryservice.services.brewing;
 
+import com.marco.dtocommoninterface.event.BrewBeerEvent;
+import com.marco.dtocommoninterface.event.NewInventoryEvent;
 import com.marco.dtocommoninterface.model.BeerDto;
 import com.marco.ultimabreweryservice.config.JmsConfig;
 import com.marco.ultimabreweryservice.domain.Beer;
-import com.marco.ultimabreweryservice.event.BrewBeerEvent;
-import com.marco.ultimabreweryservice.event.NewInventoryEvent;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -1,8 +1,8 @@
 package com.marco.ultimabreweryservice.services.brewing;
 
+import com.marco.dtocommoninterface.event.BrewBeerEvent;
 import com.marco.ultimabreweryservice.config.JmsConfig;
 import com.marco.ultimabreweryservice.domain.Beer;
-import com.marco.ultimabreweryservice.event.BrewBeerEvent;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
 import com.marco.ultimabreweryservice.services.BeerInventoryService;
 import com.marco.ultimabreweryservice.web.mappers.BeerMapper;
