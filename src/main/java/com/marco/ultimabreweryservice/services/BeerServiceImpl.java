@@ -3,7 +3,6 @@ package com.marco.ultimabreweryservice.services;
 import com.marco.dtocommoninterface.model.BeerDto;
 import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import com.marco.ultimabreweryservice.domain.Beer;
-import com.marco.ultimabreweryservice.model.BeerPagedList;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
 import com.marco.ultimabreweryservice.web.exception.NotFoundException;
 import com.marco.ultimabreweryservice.web.mappers.BeerMapper;

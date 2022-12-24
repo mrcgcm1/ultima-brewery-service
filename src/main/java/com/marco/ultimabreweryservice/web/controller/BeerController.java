@@ -1,7 +1,6 @@
 package com.marco.ultimabreweryservice.web.controller;
 
 import com.marco.dtocommoninterface.model.BeerStyleEnum;
-import com.marco.ultimabreweryservice.model.BeerPagedList;
 import com.marco.ultimabreweryservice.services.BeerService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
