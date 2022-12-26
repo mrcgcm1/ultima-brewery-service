@@ -1,5 +1,7 @@
 package com.marco.ultimabreweryservice.web.controller;
 
+import com.marco.dtocommoninterface.model.BeerDto;
+import com.marco.dtocommoninterface.model.BeerPagedList;
 import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import com.marco.ultimabreweryservice.services.BeerService;
 import lombok.AllArgsConstructor;
@@ -8,7 +10,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.marco.dtocommoninterface.model.BeerDto;
 
 import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;

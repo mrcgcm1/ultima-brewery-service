@@ -1,6 +1,7 @@
 package com.marco.ultimabreweryservice.services;
 
 import com.marco.dtocommoninterface.model.BeerDto;
+import com.marco.dtocommoninterface.model.BeerPagedList;
 import com.marco.dtocommoninterface.model.BeerStyleEnum;
 import com.marco.ultimabreweryservice.domain.Beer;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
