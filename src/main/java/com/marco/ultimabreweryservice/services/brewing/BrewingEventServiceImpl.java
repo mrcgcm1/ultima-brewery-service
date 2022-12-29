@@ -4,7 +4,7 @@ import com.marco.dtocommoninterface.event.BrewBeerEvent;
 import com.marco.ultimabreweryservice.config.JmsConfig;
 import com.marco.ultimabreweryservice.domain.Beer;
 import com.marco.ultimabreweryservice.repositories.BeerRepository;
-import com.marco.ultimabreweryservice.services.BeerInventoryService;
+import com.marco.ultimabreweryservice.services.inventory.BeerInventoryService;
 import com.marco.ultimabreweryservice.web.mappers.BeerMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -37,9 +37,9 @@ public class BrewingEventServiceImpl implements BrewingEventService {
 
             log.debug("Inventory is " + (invOH != null ? invOH : " niente"));
 
-          //  if (minOh >= invOH) {
+            if (minOh != null && invOH != null && minOh >= invOH) {
                 jmsTemplate.convertAndSend(JmsConfig.BREWING_REQUEST_QUEUE, new BrewBeerEvent(mapper.beerToBeerDto(b)));
-           // }
+           }
 
         });
     }

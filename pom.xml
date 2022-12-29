@@ -13,28 +13,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>ultima-brewery-service</name>
     <description>Service per la gestione delle birre</description>
+
     <dependencies>
-        <!-- Envers -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-envers</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.13.2</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-hibernate5 -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.datatype</groupId>
-            <artifactId>jackson-datatype-hibernate5</artifactId>
-            <version>2.13.2</version>
-        </dependency>
-        <!-- Fine Envers -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
 
   <!--        <dependency>
             <groupId>com.oracle.database.jdbc</groupId>
@@ -56,20 +36,6 @@
             <version>1.6.9</version>
         </dependency>
         <!--  Fine Open api    -->
-        <!--    Caching    -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-cache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.cache</groupId>
-            <artifactId>cache-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.ehcache</groupId>
-            <artifactId>ehcache</artifactId>
-        </dependency>
-        <!--  Fine  Caching    -->
         <!--  Interfaccia pre la condifvisione delle informazioni   -->
         <dependency>
             <groupId>com.marco</groupId>
@@ -78,13 +44,24 @@
         </dependency>
         <!--  Fine  Caching    -->
 
-<!--
+        <!--  registrazione su Eureka per essere gestito da spring cloud gateway   -->
+
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.14.1</version>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
--->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <!--            <version>4.0.0</version>-->
+        </dependency>        <!--
+               <dependency>
+                   <groupId>com.fasterxml.jackson.core</groupId>
+                   <artifactId>jackson-databind</artifactId>
+                   <version>2.14.1</version>
+               </dependency>
+       -->
 <!--        <dependency>-->
 <!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
 <!--            <artifactId>jackson-datatype-jsr310</artifactId>-->
@@ -100,6 +77,17 @@
 <!--        </dependency>-->
         <!--  Fine  Container    -->
     </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2021.0.5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>

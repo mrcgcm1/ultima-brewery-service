@@ -1,4 +1,4 @@
-package com.marco.ultimabreweryservice.services;
+package com.marco.ultimabreweryservice.services.inventory;
 
 import java.util.UUID;
 

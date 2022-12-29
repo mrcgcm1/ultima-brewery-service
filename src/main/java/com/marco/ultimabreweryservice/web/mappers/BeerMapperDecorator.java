@@ -2,7 +2,7 @@ package com.marco.ultimabreweryservice.web.mappers;
 
 import com.marco.dtocommoninterface.model.BeerDto;
 import com.marco.ultimabreweryservice.domain.Beer;
-import com.marco.ultimabreweryservice.services.BeerInventoryService;
+import com.marco.ultimabreweryservice.services.inventory.BeerInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class BeerMapperDecorator implements BeerMapper{
