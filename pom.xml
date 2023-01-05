@@ -5,7 +5,7 @@
     <parent>
         <artifactId>beer-service-bom-new</artifactId>
         <groupId>com.marco</groupId>
-        <version>1.0-3</version>
+        <version>1.0.5</version>
     </parent>
 
     <groupId>com.marco</groupId>
@@ -44,12 +44,6 @@
         </dependency>
         <!--  Fine  Caching    -->
 
-        <!--  registrazione su Eureka per essere gestito da spring cloud gateway   -->
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -57,24 +51,6 @@
             <!--            <version>4.0.0</version>-->
         </dependency>
 
-<!--    lezione 279 configurazione del client    -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <!--    Fine lezione 279     -->
-        <!--
-               <dependency>
-                   <groupId>com.fasterxml.jackson.core</groupId>
-                   <artifactId>jackson-databind</artifactId>
-                   <version>2.14.1</version>
-               </dependency>
-       -->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.datatype</groupId>-->
-<!--            <artifactId>jackson-datatype-jsr310</artifactId>-->
-<!--            <version>2.14.1</version>-->
-<!--        </dependency>-->
         <!--  Test Container   -->
         <!-- https://mvnrepository.com/artifact/org.testcontainers/oracle-xe -->
 <!--        <dependency>-->
