@@ -35,8 +35,8 @@ public class BeerInventoryServiceRestTemplateImpl implements BeerInventoryServic
     private String beerInventoryServiceHost;
 
     public BeerInventoryServiceRestTemplateImpl(RestTemplateBuilder builder,
-                                                @Value("${com.marco.beer.inventory-user}") String inventoryUser
-    , @Value("${com.marco.beer.inventory-password}") String inventoryPassword) {
+                                                @Value("${com.marco.beer.inventory-user}") String inventoryUser,
+                                                @Value("${com.marco.beer.inventory-password}") String inventoryPassword) {
 
         this.restTemplate = builder
                 .basicAuthentication(inventoryUser, inventoryPassword)
