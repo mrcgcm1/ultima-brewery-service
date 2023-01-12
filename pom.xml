@@ -5,12 +5,12 @@
     <parent>
         <artifactId>beer-service-bom-new</artifactId>
         <groupId>com.marco</groupId>
-        <version>1.0.5</version>
+        <version>1.0.8</version>
     </parent>
 
     <groupId>com.marco</groupId>
     <artifactId>ultima-brewery-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>ultima-brewery-service</name>
     <description>Service per la gestione delle birre</description>
 
